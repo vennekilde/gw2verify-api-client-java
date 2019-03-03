@@ -1,12 +1,10 @@
-
 package com.farshiverpeaks.gw2verifyclient.resource.users.service_id.service_user_id.apikey.name.model;
 
-
-public class NamePUTHeader {
+public class NameGETHeader {
 
     private String _xAccessToken;
 
-    public NamePUTHeader(String xAccessToken) {
+    public NameGETHeader(String xAccessToken) {
         _xAccessToken = xAccessToken;
     }
 

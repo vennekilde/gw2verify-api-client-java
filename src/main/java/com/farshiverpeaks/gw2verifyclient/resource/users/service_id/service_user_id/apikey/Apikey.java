@@ -4,6 +4,7 @@ import com.farshiverpeaks.gw2verifyclient.exceptions.GuildWars2VerificationAPIEx
 import com.farshiverpeaks.gw2verifyclient.model.APIKeyData;
 import com.farshiverpeaks.gw2verifyclient.resource.users.service_id.service_user_id.apikey.model.ApikeyPUTHeader;
 import com.farshiverpeaks.gw2verifyclient.resource.users.service_id.service_user_id.apikey.model.ApikeyPUTQueryParam;
+import com.farshiverpeaks.gw2verifyclient.resource.users.service_id.service_user_id.apikey.name.Name;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
@@ -15,10 +16,12 @@ public class Apikey {
 
     private String _baseUrl;
     private Client _client;
+    public final Name name;
 
     public Apikey(String baseUrl, Client _client) {
         _baseUrl = (baseUrl + "/apikey");
         this._client = _client;
+        name = new Name(getBaseUri(), getClient());
     }
 
     protected Client getClient() {

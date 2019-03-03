@@ -114,9 +114,9 @@ traits:
                                 application/json:
                                     type: Error
                 /name:
-                    put:
+                    get:
                         is: [secured]
-                        description: SetGet a service user's apikey name they are required to use if apikey name restriction is enforced
+                        description: Get a service user's apikey name they are required to use if apikey name restriction is enforced
                         responses:
                             200:
                                 body:
