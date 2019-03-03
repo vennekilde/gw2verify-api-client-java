@@ -113,6 +113,19 @@ traits:
                             body:
                                 application/json:
                                     type: Error
+                /name:
+                    put:
+                        is: [secured]
+                        description: SetGet a service user's apikey name they are required to use if apikey name restriction is enforced
+                        responses:
+                            200:
+                                body:
+                                    application/json:
+                                        type: APIKeyName
+                            400:
+                                body:
+                                    application/json:
+                                        type: Error
             /verification:
                 /refresh:
                     post:
@@ -264,3 +277,9 @@ types:
             primary:
                 type: boolean
                 description: Set if the user should be the primary user of that particular service. There can only be one per service per account. Setting a new primary user will override the old one
+    APIKeyName:
+        type: object
+        properties:
+            name:
+                type: string
+                description: The apikey name the user has to name their apikey if apikey name is enforced
