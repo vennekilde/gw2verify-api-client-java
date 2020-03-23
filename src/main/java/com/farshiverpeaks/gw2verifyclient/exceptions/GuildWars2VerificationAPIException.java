@@ -32,4 +32,8 @@ public class GuildWars2VerificationAPIException
         return this.reason;
     }
 
+    @Override
+    public String toString() {
+        return "GuildWars2VerificationAPIException{" + "statusCode=" + statusCode + ", reason=" + reason + ", error=" + error + '}';
+    }
 }
