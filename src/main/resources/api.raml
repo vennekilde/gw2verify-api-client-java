@@ -30,6 +30,7 @@ traits:
                 description: 0 = Website user id, 1 = Teamspeak database id, 2 = Discord user id
         /subscribe:
             get:
+                is: [secured]
                 description: Long polling rest endpoint for receiving verification updates
                 responses:
                     200:

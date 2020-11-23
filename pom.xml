@@ -46,7 +46,7 @@
                 <executions>
                     <execution>
                         <goals>
-                            <!--<goal>generate-client</goal>-->
+                            <goal>generate-client</goal>
                         </goals>
                         <configuration>
                             <basePackage>com.farshiverpeaks.gw2verifyclient</basePackage>
